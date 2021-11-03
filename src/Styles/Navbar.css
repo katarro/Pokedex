@@ -1,5 +1,9 @@
 .App{
     overflow-x: hidden;
+    background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
 }
 .Navbar{
     background-color: rgb(30, 83, 114);
@@ -96,11 +100,14 @@
     box-shadow: 2px 2px 6px black;    
     border-radius: 10px;
     text-decoration: none;
+    background-color: #ffff;
+    opacity: 0.9;
 }
 .row-poke{
     display: grid;
     width: 75%;
     grid-template-columns: 25% 25% 25% 25%;
+    
 }
 .row-loader{
     display: flex;
@@ -115,6 +122,7 @@
 .container-poke{
     display: flex;
     justify-content: center;
+    
 }
 @media(max-width:790px){
     .row-poke{

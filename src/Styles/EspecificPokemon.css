@@ -1,21 +1,127 @@
-.row{
+:root {
+  --gradient: linear-gradient(to bottom, #00b09b, #96c93d);
+}
+.row {
+  position: relative;
+  padding-top: 10px;
+  margin-left: -20%;
+  height: 600px;
+  width: 500px;
+  box-shadow: 3px 3px 6px black;
+  border: #0d47a1 solid 8px;
+  background: linear-gradient(to bottom, #00b09b, #96c93d);
+  border-radius: 10px;
+  font-family: "Russo One", sans-serif;
+}
+h5 {
+  /* COLOR DEGRADADO A LAS LETRAS*/
+  background: -webkit-linear-gradient(yellow, rgba(219, 106, 13, 0.993));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.padre {
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: max-content;
+}
+.poderes1 {
+  display: flex;
+  display: inline-flex;
+  max-height: 70px;
+  margin-top: 80px;
+}
+.poderes2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.picture img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: -45px;
+}
+.powers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.col-sm {
+  max-height: 70px;
+  font-size: large;
+  color: white;
+}
+.container-especific {
+  background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.back{
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .row {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin-left: -3%;
+  }
+  .poderes1 {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10%;
-    margin-left: 35%;
-    margin-right: 35%;
-    box-shadow: 3px 3px 6px black;
-    border-radius: 15px;
+    display: inline-flex;
+  }
+  .powers{
+    margin-top: 50px;
+  }
+  
 }
-.picture img{
-    width: 150px;
+@media (max-width: 575px) {
+  .poderes1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
+@media (max-width: 481px) {
+  .row {
+    display: flex;
+    margin-left: 20%;
+    height: 600px;
+    width: 250px;
+  }
+  .padre {
+    display: flex;
+    max-width: 320px;
+    margin-left: 100%;
+  }
+  .poderes1 {
+    display: block;
+  }
+  .col-sm {
+    font-size: large;
+    margin: 16px 0 5px 0;
+  }
+  .powers {
+    margin-top: 120px;
+    margin-bottom: -20px;
+  }
+  .picture {
     height: 150px;
+    width: 150px;
+    margin-top: -30px;
+  }
+  .picture img {
+    display: flex;
+    margin-bottom: 100px;
+  }
 }
-.powers{
-    margin-top: 30px;
-    margin: 30px;
-}
-.col-sm{
-    margin: 20px;
+@media (max-width: 380px) {
+  .row {
+    display: flex;
+    margin-left: -1px;
+  }
 }

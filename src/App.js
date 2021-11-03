@@ -53,7 +53,7 @@ function App(props) {
 
 	return (
 		<React.Fragment>
-			<Navbar/>
+			{/* <Navbar/>*/ }
 			<Routes pokemons={pokemons} />
 		</React.Fragment>
 	);

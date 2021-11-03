@@ -26,7 +26,11 @@ const EspecificPokemon = () => {
 
 	return (
 		<React.Fragment>
-			<TargetEspecific pokemon={pokemon} poderes={poderes} />
+			<div className="target-especific">
+			
+				<TargetEspecific pokemon={pokemon} poderes={poderes} />
+
+			</div>
 		</React.Fragment>
 	);
 };
