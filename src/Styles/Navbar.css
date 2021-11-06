@@ -1,156 +1,173 @@
-.App{
-    overflow-x: hidden;
-    background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
+.App {
+  display: grid;
+  overflow-x: hidden;
+  background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  width: 100%;
 }
-.Navbar{
-    background-color: rgb(30, 83, 114);
-    width: 100%;
-    height: 12vh;
-    display: flex;
-    overflow: hidden;
+.container-header {
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
 }
-.pokebola{
-    height: 60px;
-    width: 60px;
-    margin-top: 10px;
-    margin-left: 30px;
- 
+.Navbar {
+  background-color: rgb(30, 83, 114);
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  overflow: hidden;
 }
-.form-control{
-    height: 45px;
+.container {
+  background: none;
 }
-.img-poke-titulo{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px; 
-    ;   
+.container-input {
+  width: 80%;
 }
-.id{
-    display: flex;
-    padding-left: 5px;
-    margin-top: -5px;
-    opacity: .4;
+.input {
+  place-items: center;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 10px;
+  width: 80%;
 }
-.pokemon-favorite{
-    text-align: right;
-    padding-right: 5px;
-    margin-left: auto;
-    margin-top: -20px;
+.img-poke-titulo {
+  display: grid;
+  place-items: center;
+  padding-bottom: 50px;
 }
-.i-p{
-    width: 50px;
-    text-align: center;
-    justify-content: center;    
+/*
+.form-control {
+  height: 45px;
 }
-.container{
-    padding: 10px;
-    grid-gap: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+
+.id {
+  display: flex;
+  padding-left: 5px;
+  margin-top: -5px;
+  opacity: 0.4;
 }
-@media(max-width: 790px){
-    .container{
-        grid-template-columns: auto auto auto;
-    }
+.pokemon-favorite {
+  text-align: right;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-top: -20px;
 }
-@media(max-width: 575px){
-    .container{
-        grid-template-columns:  auto auto;
-    }
+.i-p {
+  width: 50px;
+  text-align: center;
+  justify-content: center;
 }
-@media(max-width: 430px){
-    .container{
-        grid-template-columns:   auto;
-    }
+.container {
+  padding: 10px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
-.card{
-    padding: 10px 10px 10px 100px;
-    box-shadow: 3px 3px 3px black;
+@media (max-width: 790px) {
+  .container {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 430px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
+.card {
+  padding: 10px 10px 10px 100px;
+  box-shadow: 3px 3px 3px black;
 }
 .container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
-.card-img{
-    width: 150px;
-    height: 150px;
+.card-img {
+  width: 150px;
+  height: 150px;
 }
-.card-name{
-    text-decoration: none;
-    justify-content: center;
-    padding-top: 15px;
-    padding-left: 10px;
+.card-name {
+  text-decoration: none;
+  justify-content: center;
+  padding-top: 15px;
+  padding-left: 10px;
 }
-.card-type p{
-    text-align: left;
-    font-size: 18px;
-    display:inline-block;
-    margin-right: 10px;
-    
+.card-type p {
+  text-align: left;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 10px;
 }
 /*************************/
 
-.target{
-    justify-content: center;
-    text-align: center;
-    margin: 10px;
-    box-shadow: 2px 2px 6px black;    
-    border-radius: 10px;
-    text-decoration: none;
-    background-color: #ffff;
-    opacity: 0.9;
+.target {
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 6px black;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: #ffff;
+  opacity: 0.9;
 }
-.row-poke{
+.row-poke {
+  display: grid;
+  width: 75%;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.row-loader {
+  display: flex;
+  padding-left: 180%;
+}
+*/
+/*
+@media (max-width: 790px) {
+  .row-loader {
+    display: flex;
+    padding-left: 10%;
+  }
+}
+.container-poke {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 790px) {
+  .row-poke {
     display: grid;
-    width: 75%;
-    grid-template-columns: 25% 25% 25% 25%;
-    
+    grid-template-columns: 33% 33% 33%;
+  }
 }
-.row-loader{
-    display: flex;
-    padding-left: 180%;
+@media (max-width: 630px) {
+  .row-poke {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 }
-@media(max-width: 790px){
-    .row-loader{
-        display: flex;
-        padding-left: 10%;
-    }
+@media (max-width: 480px) {
+  .row-poke {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
-.container-poke{
-    display: flex;
-    justify-content: center;
-    
-}
-@media(max-width:790px){
-    .row-poke{
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-    }
-}
-@media(max-width:630px){
-    .row-poke{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-}
-@media(max-width:480px){
-    .row-poke{
-        display: grid;
-        grid-template-columns: 100%;
-    }
-}
-a{
-    text-decoration: none;
-    color: black;
+*/
+a {
+  text-decoration: none;
+  color: black;
 }
 
-a:hover{
-    color: rgb(30, 83, 114);   
+a:hover {
+  color: rgb(30, 83, 114);
 }
-.col-12{
-    padding-left: 100px;
-    padding-right: 100px;
+.col-12 {
+  padding-left: 100px;
+  padding-right: 100px;
 }

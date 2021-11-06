@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
 import "../Styles/Navbar.css";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
-import TargetEspecific from "./TargetEspecific";
 
 function Pokedex(props) {
   var img =
@@ -33,9 +31,9 @@ function Pokedex(props) {
   };
 
   return (
-    <div className="App">
-      <div className="justify-content-center mb-5 mt-5">
-        <div className="col-12">
+    <React.Fragment>
+      <div className="App">
+        <div className="container-header">
           <div className="img-poke-titulo">
             <Link to="/">
               <img
@@ -46,64 +44,67 @@ function Pokedex(props) {
             </Link>
           </div>
 
-          <input
-            placeholder="Busca un pokémon..."
-            type="text"
-            value={searchPoke}
-            className="form-control mt-3"
-            aria-label="Large"
-            onChange={handleChange}
-          />
+          <div className="container-input">
+            <input
+              placeholder="Busca un pokémon..."
+              type="text"
+              value={searchPoke}
+              className="mt-3 input"
+              aria-label="Large"
+              onChange={handleChange}
+            />
+          </div>
         </div>
-      </div>
+      {
+        <div className="container-pokemons">
+          
+            {loading ? (
+              <div className="row-loader">
+                <Loader />
+              </div>
+            ) : (
+              pokemons
+                .filter((user) => {
+                  if (searchPoke === "") {
+                    return user;
+                  } else if (
+                    user.name
+                      .toLowerCase()
+                      .includes(searchPoke.toLocaleLowerCase())
+                  ) {
+                    return user;
+                  }
+                })
+                .map((pokemon) => (
+                  <Link to={`/pokemons/${pokemon.id}`}>
+                    <div className="target" key={pokemon.id}>
+                      <div className="id">#{pokemon.id}</div>
+                      <div className="pokemon-favorite">&#10084;&#65039;</div>
+                      <div className="img">
+                        <img
+                          className="card-img"
+                          src={pokemon.sprites.front_default}
+                          alt="foto pokemon"
+                        />
+                      </div>
 
-      <div className="container-poke">
-        <div className="row-poke">
-          {loading ? (
-            <div className="row-loader">
-              <Loader />
-            </div>
-          ) : (
-            pokemons
-              .filter((user) => {
-                if (searchPoke === "") {
-                  return user;
-                } else if (
-                  user.name
-                    .toLowerCase()
-                    .includes(searchPoke.toLocaleLowerCase())
-                ) {
-                  return user;
-                }
-              })
-              .map((pokemon) => (
-                <Link to={`/pokemons/${pokemon.id}`}>
-                  <div className="target" key={pokemon.id}>
-                    <div className="id">#{pokemon.id}</div>
-                    <div className="pokemon-favorite">&#10084;&#65039;</div>
-                    <div className="img">
-                      <img
-                        className="card-img"
-                        src={pokemon.sprites.front_default}
-                        alt="foto pokemon"
-                      />
+                      <div className="card-name">
+                        <h3 className="card-tittle">{pokemon.name}</h3>
+                      </div>
+                      <div className="card-type">
+                        {pokemon.types.map((type, id) => {
+                          return <p key={id}>{type.type.name}</p>;
+                        })}
+                      </div>
                     </div>
-
-                    <div className="card-name">
-                      <h3 className="card-tittle">{pokemon.name}</h3>
-                    </div>
-                    <div className="card-type">
-                      {pokemon.types.map((type, id) => {
-                        return <p key={id}>{type.type.name}</p>;
-                      })}
-                    </div>
-                  </div>
-                </Link>
-              ))
-          )}
+                  </Link>
+                ))
+            )}
+          
         </div>
+            }
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
