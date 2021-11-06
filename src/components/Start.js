@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 import "../Styles/Start.css";
 export default function Start() {
   var img =
@@ -9,12 +8,12 @@ export default function Start() {
   return (
     <React.Fragment>
       <div className="row3" id="container">
-        <div className="padre">
-          <div className="col-12" id="logo-principal">
-              <img src={img} alt="Pokemons" />
+        <div className="sub-container">
+          <div className="container-logo" >
+              <img className="img" src={img} alt="Pokemons" />
           </div>
 
-          <div className="col-12" id="button-Start">
+          <div className="container-button">
             <Link to="/pokemons">
               <button className="btn btn-success">
                 {" "}

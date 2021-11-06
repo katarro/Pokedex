@@ -1,79 +1,36 @@
+body{
+  font-family: "Russo One", sans-serif;
+}
 #container {
   background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
-  
+  width: 100%;
+  display: grid;
+  place-items: center;
+  border: solid red 2px;
 }
-.padre{
-  display: block;
-  justify-content: center;
-  height: 100vh;
-  position: absolute;
-  left: calc(50% - 202px);
-  margin-top: -5%;
-  margin-left: -10px;
-
-}
-#button-Start {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  max-height: 80px;
-  padding-top: 4vh;
-  margin-left: 50px;
-  
-}
-
-#logo-principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1vh;
-  max-width: 400px;
-  max-height: 400px;
-}
-#logo-principal img {
-  height: 400px;
+.sub-container {
+  display: grid;
+  place-items: center;
   width: 400px;
 }
-.btn-success {
-  box-shadow: 3px 3px 6px green;
-  width: 200px;
-  
+.container-button {
+  padding-top: 180px;
 }
-@media (max-width: 480px) {
-  
-  #logo-principal img{
-    max-width: 300px;
-  }
-  .padre{
-    position: absolute;
-    left: calc(15%);
-    max-width: 300px;
-    top: -100px;
-  }
-  #button-Start{
-    max-width: 200px;
-  }
-
-  
+.img {
+  width: 400px;
 }
-@media (max-width: 390px){
-  #logo-principal img{
-    max-width: 250px;
-  }
-  .padre{
-    position: absolute;
-    max-width: 250px;
+.btn {
+  height: 50px;
+}
 
+@media (max-width: 490px){
+  .sub-container{
+    width: 300px;
   }
-  #button-Start{
-    margin-left: 17px;
-    max-width: 150px;
+  .img{
+    width: 300px;
   }
-
-
 }

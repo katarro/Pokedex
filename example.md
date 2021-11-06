@@ -1,1 +1,0 @@
-example for verify conection with the repo
