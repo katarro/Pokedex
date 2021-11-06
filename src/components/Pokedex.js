@@ -55,11 +55,10 @@ function Pokedex(props) {
             />
           </div>
         </div>
-      {
-        <div className="container-pokemons">
-          
+        {
+          <div className="container-pokemons">
             {loading ? (
-              <div className="row-loader">
+              <div className="loader">
                 <Loader />
               </div>
             ) : (
@@ -76,33 +75,42 @@ function Pokedex(props) {
                   }
                 })
                 .map((pokemon) => (
-                  <Link to={`/pokemons/${pokemon.id}`}>
-                    <div className="target" key={pokemon.id}>
-                      <div className="id">#{pokemon.id}</div>
-                      <div className="pokemon-favorite">&#10084;&#65039;</div>
-                      <div className="img">
-                        <img
-                          className="card-img"
-                          src={pokemon.sprites.front_default}
-                          alt="foto pokemon"
-                        />
-                      </div>
+                  
+                    
+                    <Link to={`/pokemons/${pokemon.id}`}>
+                      <div className="target" key={pokemon.id}>
+                        <div className="container-header-target">
+                          <div className="id">#{pokemon.id}</div>
+                          <div className="pokemon-favorite">
+                            &#10084;&#65039;
+                          </div>
+                        </div>
 
-                      <div className="card-name">
-                        <h3 className="card-tittle">{pokemon.name}</h3>
+                        <img
+                          className="img"
+                          src={pokemon.sprites.front_default}
+                          alt="pokemon"
+                        />
+
+                        <div className="card-name">
+                          <h3 className="card-tittle">{pokemon.name}</h3>
+                        </div>
+                        <div className="card-type">
+                          {pokemon.types.map((type, id) => {
+                            return (
+                              <p key={id} className="type">
+                                {type.type.name}
+                              </p>
+                            );
+                          })}
+                        </div>
                       </div>
-                      <div className="card-type">
-                        {pokemon.types.map((type, id) => {
-                          return <p key={id}>{type.type.name}</p>;
-                        })}
-                      </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  
                 ))
             )}
-          
-        </div>
-            }
+          </div>
+        }
       </div>
     </React.Fragment>
   );

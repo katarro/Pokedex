@@ -1,3 +1,9 @@
+:root {
+  --xsm: 200px;
+  --sm: 300px;
+  --lg: 400px;
+  --gradient: linear-gradient(to bottom, #00b09b, #96c93d);
+}
 .App {
   display: grid;
   overflow-x: hidden;
@@ -6,6 +12,14 @@
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
+}
+.container-header-target {
+  display: flex;
+  justify-content: space-between;
+}
+.id {
+  color: black;
+  font-weight: 300;
 }
 .container-header {
   display: grid;
@@ -40,6 +54,84 @@
   place-items: center;
   padding-bottom: 50px;
 }
+.loader {
+  display: grid;
+  place-items: center;
+}
+
+.container-pokemons {
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+}
+.target {
+  width: var(--md);
+  height: var(--md);
+}
+.container-img {
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+.img {
+  height: var(--xsm);
+}
+.card-tittle {
+  text-decoration: none;
+  list-style: none;
+}
+.card-type {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.type {
+  text-decoration: none;
+  list-style: none;
+}
+.target {
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 6px black;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--gradient);
+  opacity: 0.9;
+}
+h3 {
+  font-size: 30px;
+}
+p {
+  font-size: 20px;
+}
+h3,
+p {
+  /* COLOR DEGRADADO A LAS LETRAS*/
+  background: -webkit-linear-gradient(
+    rgb(247, 247, 7),
+    rgba(109, 54, 9, 0.993)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@media (min-width: 880px) {
+  .container-pokemons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+}
+@media (min-width: 1340px) {
+  .container-pokemons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+  }
+}
+
 /*
 .form-control {
   height: 45px;
@@ -109,26 +201,6 @@
 }
 /*************************/
 
-.target {
-  justify-content: center;
-  text-align: center;
-  margin: 10px;
-  box-shadow: 2px 2px 6px black;
-  border-radius: 10px;
-  text-decoration: none;
-  background-color: #ffff;
-  opacity: 0.9;
-}
-.row-poke {
-  display: grid;
-  width: 75%;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-.row-loader {
-  display: flex;
-  padding-left: 180%;
-}
-*/
 /*
 @media (max-width: 790px) {
   .row-loader {
@@ -166,8 +238,4 @@ a {
 
 a:hover {
   color: rgb(30, 83, 114);
-}
-.col-12 {
-  padding-left: 100px;
-  padding-right: 100px;
 }
