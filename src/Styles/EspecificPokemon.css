@@ -20,17 +20,18 @@ h5 {
   -webkit-text-fill-color: transparent;
 }
 .padre {
-  padding-top: 20vh;
-  display: flex;
-  justify-content: center;
+  display: grid;
   text-align: center;
-  max-width: max-content;
+  place-items: center;
 }
 .poderes1 {
   display: flex;
   display: inline-flex;
   max-height: 70px;
   margin-top: 80px;
+}
+.poderes2 .col p{
+  text-decoration-color: white;
 }
 .poderes2 {
   display: flex;
@@ -56,8 +57,9 @@ h5 {
 .container-especific {
   background-image: url("https://pbs.twimg.com/media/DQum78SUMAIqYzS.jpg");
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
+  display: grid;
+  place-items: center;
 }
 .back{
   display: flex;
@@ -72,7 +74,7 @@ h5 {
   }
   .poderes1 {
     display: flex;
-    display: inline-flex;
+    justify-content: inline-flex;
   }
   .powers{
     margin-top: 50px;
@@ -82,48 +84,20 @@ h5 {
 @media (max-width: 575px) {
   .poderes1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
 }
-@media (max-width: 481px) {
-  .row {
-    display: flex;
-    margin-left: 20%;
-    height: 680px;
-    width: 300px;
-    margin-left: -3%;
-    margin-top: -4%;
-  }
-  .padre {
-    display: flex;
-    max-width: 320px;
-    margin-left: 100%;
+
+@media (max-width:440px){
+  .row{
+    width: 320px;
   }
   .poderes1 {
-    display: block;
-  }
-  .col-sm {
-    font-size: large;
-    margin: 16px 0 5px 0;
-  }
-  .powers {
-    margin-top: 120px;
-    margin-bottom: -20px;
-  }
-  .picture {
-    height: 150px;
-    width: 150px;
-    margin-top: -30px;
-  }
-  .picture img {
     display: flex;
-    margin-bottom: 100px;
+    justify-content: space-evenly;
   }
-}
-@media (max-width: 380px) {
-  .row {
-    display: flex;
-    margin-left: -1px;
+  .col-sm{
+    padding-left: 15px;
   }
 }

@@ -35,7 +35,7 @@ const TargetEspecific = (props) => {
           </div>
           <div className="poderes2">
             {poderes.map((p) => (
-              <div className="col-sm">
+              <div className="col">
                 <p key={p.ability.slot}>{p.ability.name}</p>
               </div>
             ))}
